@@ -1,0 +1,938 @@
+
+    /*Styling der gælder hele siden*/
+body {
+    margin: 0;
+    font-family: 'open sans', sans-serif;
+    background-color: #faf7ef;
+}
+/*Styling af links*/
+a{
+    color: white;
+    text-decoration: none;
+}
+/*Styling for stor skærm (over 600 Pixels) */
+@media screen and (min-width:601px) {
+    .grid-container {
+        display: grid;
+        justify-items: center;
+    }}
+
+
+.logo{
+    width: 350px;
+    display: block;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+
+#topnav{
+    background-color:#426f61;
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 8px;
+    padding-top: 5px;
+    padding-left: -10px;
+}
+
+.navtekst{
+    padding-left: 2%;
+    padding-right: 2%;
+}
+/*Hover-effekt på links i navigation.*/
+.navtekst:hover {
+    background-color: darksalmon;
+    padding-bottom: 8px;
+    padding-top: 5px;
+    color: white;
+    
+}
+/*Omfarver links tilsvarende siden man er på*/
+.navtekstmarkeret {
+    background-color:cadetblue;
+    padding-bottom: 8px;
+    padding-top: 5px;
+}
+/*Rykker some ikonerne en smule længere væk fra de andre links*/
+.navfb{
+    padding-left: 30px;
+    padding-right: %;
+}
+
+
+.someicons{
+    height: 20px;
+    margin-bottom: -4px;
+    padding-left: 10px;
+}
+/*Sticky topbar  fra w3schools - https://www.w3schools.com/howto/howto_js_navbar_sticky.asp*/
+.sticky {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 4;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon{
+    display: none;
+}
+
+/* When the screen is less than X pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px){
+    .topnav a {display: none;}
+    .topnav a.icon {float: right;
+    display: block;}
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This displays the links vertically instead of horizontally */
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    padding-left: 0px;
+}
+
+/*
+.sticky + .grid-container {
+  padding-top: 360px;
+}*/
+
+.topbanner{
+    object-position: center;
+    background-color: #faf7ef;  
+}
+/*Sikrer Bannere altid fylder hele skærmens bredde*/
+.topbannerimg{
+    width: 100vw;
+    padding-bottom: 90px;
+}
+
+.spotsektion::after {
+    content: "";
+    clear: both;
+    display: table; 
+}
+/*Sikrer Bannere altid fylder hele skærmens bredde*/
+.spot {
+    float: left;
+    width: 50%; 
+}
+
+.spotimg {
+    width: 100%;
+}
+
+
+/*Styling af små overskrifter*/
+h3{
+    margin-bottom: 8px;
+    font-family: 'open sans' sans-serif;
+}
+/*Grid med tre kolonner til vores spots til inspirationssiden*/
+.blogsektion{
+    display: grid;
+    grid-template-columns: 20vw 20vw 20vw;
+    padding-top: 50px;
+    padding-left: 150px;
+    padding-right: 150px;
+    grid-gap: 10%;
+    margin-bottom: 200px;
+}
+
+/*Styling af billederne i gridet*/
+.blogspot{
+    padding-top: 50px;
+    width: 85%;    
+}
+
+/*Drop Shadow på billederne*/
+.blogspotskygge{
+    padding-top: 50px;
+    width: 90%;    
+}
+
+/*Definerer hvor i gridet hver enkelt billede skal lægge sig*/
+.blogspot1{
+    grid-column-start: 1;
+    grid-column-end:  2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    width: 100%;
+    z-index: 1;
+}
+
+.blogspot2{
+    grid-column-start: 2;
+    grid-column-end:  3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    width: 100%;
+    z-index: 1;
+}
+    
+.blogspot3{
+    grid-column-start: 3;
+    grid-column-end:  4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    width: 100%;
+    z-index: 1;
+}
+
+.blogspottekst1{
+    grid-column-start: 1;
+    grid-column-end:  2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    text-align: center;
+}
+
+.blogspottekst2{
+    grid-column-start: 2;
+    grid-column-end:  3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    text-align: center;     
+}
+
+.blogspottekst3{
+    grid-column-start: 3;
+    grid-column-end:  4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    text-align: center;
+}
+
+.blogspotSkygge1{
+    grid-column-start: 1;
+    grid-column-end:  2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.blogspotSkygge2{
+    grid-column-start: 2;
+    grid-column-end:  3;
+    grid-row-start: 1;
+    grid-row-end: 2; 
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.blogspotSkygge3{
+    grid-column-start: 3;
+    grid-column-end:  4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+
+.bundbanner {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 7;
+    grid-row-end: 8; 
+    object-position: center;
+}
+
+.bundbannerimg{
+    width: 100vw;
+}
+
+/*FOOTER*/
+.footer{
+    background-color:#62676a;
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 8;
+    grid-row-end: 9;
+    column-count: 3;
+    text-align: center;
+    padding-top: 20px; 
+    padding-bottom 100px;
+    color: #fff;
+    width: 100%;
+}
+
+.footer-text{
+    margin:px;
+    padding-top: 30px;
+    font-size: 20px
+}
+
+.footer-overskrift{
+    padding-bottom: 10px;
+}
+
+.kontakt1 {
+    background-color: aqua;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 8;
+    grid-row-end: 9;
+    margin-bottom: 30px;
+}
+
+.kontakt2 {
+    background-color: darkslategray;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 8;
+    grid-row-end: 9;
+}
+
+.kort {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 8;
+    grid-row-end: 9;
+    width: 20vw;
+    margin-bottom: 80px;
+}
+
+
+/* ---- "OM OS" STYLING ---- */
+/*Smæk hele siden ind i et grid*/
+.grid-container-blog{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+/*Definerer hvor i gridet hver enkelt element skal lægge sig*/
+.portraet{
+    width: 27vw;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding-top: 70px;
+    padding-left: 10vw;
+}
+.portraetaccent{
+    z-index: 1;
+    width: 20vw;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding-top: 30vw;
+    padding-left: 25vw;
+
+}
+
+.johannatekst {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding-top: 170px;
+    padding-left: 10vw;
+    padding-right: 5vw;
+  }
+.overskriftjohanna{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding-top: 6vw;
+    padding-left: 10vw;
+    padding-bottom: 30px;
+    
+}
+/*Ingen margin på paragraffer*/
+p {  margin:0; }
+
+.overskriftbutik{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    padding-left: 15%;
+    padding-top: 7vw;
+    padding-bottom: 30px;
+}
+.butiktekst {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    padding-top: 190px;
+    padding-left: 15%;
+    padding-right: 80px;   
+    padding-bottom: 19vw;
+}
+
+/*Styling af overskrifter*/
+h1{
+
+    text-align: start;
+    font-family: 'Patua One';
+    font-style: 
+}
+
+.butikimg {
+    width: 37vw;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    padding-top: 100px;
+    padding-left: 10vw;
+    overflow: hidden;
+}
+
+.pyntgren {
+    width: 7vw;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    padding-top: 80px;
+    padding-left: 38vw;
+    overflow: hidden;
+}
+
+.garnimg {    
+    width: 20vw;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    padding-top: 30vw;
+    padding-left: 2vw;
+    padding-right: 70px;
+    overflow: hidden;
+}
+
+/* ---- "OM OS" MOBILE STYLING ---- */
+
+/*Denne styling gælder kun på skærme der er mindre end 701 Pixels*/
+@media screen and (max-width: 700px){
+    
+.grid-container-blog{
+    display: grid;
+    grid-template-columns: 1fr;}
+    
+    
+.portraet{
+    width: 67vw;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding-top: 70px;
+    padding-left: 10vw;
+}
+.portraetaccent{
+    z-index: 1;
+    width: 35vw;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding-top: 75vw;
+    padding-left: 45vw;
+
+}
+
+.johannatekst {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    padding-top: 110px;
+    padding-left: 10vw;
+    padding-right: 5vw;
+  }
+.overskriftjohanna{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    padding-top: 6vw;
+    padding-left: 10vw;
+}
+
+p {  margin:0; }
+
+.overskriftbutik{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    padding-left: 15%;
+    padding-top: 7vw;
+}
+.butiktekst {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    padding-top: 110px;
+    padding-left: 15%;
+    padding-right: 80px;   
+    padding-bottom: 19vw;
+}
+
+h1{
+    padding-bottom: 30px;
+    text-align: start;
+    font-family: 'Patua One';
+    text-decoration: none;
+}
+
+.butikimg {
+    width: 77vw;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    padding-top: 100px;
+    padding-left: 10vw;
+    overflow: hidden;
+}
+
+.pyntgren {
+    width: 13vw;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    padding-top: 60px;
+    padding-left: 78vw;
+    overflow: hidden;
+}
+
+.garnimg {    
+    width: 40vw;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    padding-top: 65vw;
+    padding-left: 5vw;
+    padding-right: 70px;
+    overflow: hidden;
+    
+}    
+    
+    
+}
+
+
+
+/*ANIMATION AF "BLOGSPOTS"*/
+
+
+/*Før synkned er synlig og JavaScript tildeler den classen “is-visible”*/
+.synkned{
+    opacity: 0;
+    transform: translateY(-3em);
+    transition: transform 2s .4s cubic-bezier(0,1,0.3,1), opacity .5s .4s ease-out;
+    will-change: transform, opacity;
+}
+
+/*Tranformer når synkned-classen er synlig*/
+.synkned.is-visible {
+    opacity: 1;
+    transform: translateY(0em);
+}
+
+
+/* ---- MOBILE STYLING ---- */
+
+
+/*Skjul alt den grafik der ikke skal bruges på mobil siden*/
+@media screen and (min-width: 601px){
+    .topbannerMobile{display: none;}
+    .spotmobile{display: none;}
+    .spotsektionmobile {display: none;}
+    .blogspotsmobile{display: none;}
+    .blogspottekstmobile1{display: none;}
+    .blogspottekstmobile2{display: none;}
+    .blogspottekstmobile3{display: none;}
+    .bundbannermobile{display: none;}
+    .bundbannerimgmobile{display: none;}  
+}
+
+
+/*Styling når skærmen er max 600 Pixels bred*/
+
+@media screen and (max-width: 600px){
+    .spot{display: none;}
+    .topbanner{display: none;}
+    .blogsektion{display: none;}
+    .bundbanner{display: none;}
+    .bundbannerimg{display: none;}
+    .spotmobile{
+     width: 100vw;
+    }
+
+.topbannerMobile{
+    width: 100vw;  
+}
+
+.blogspot1mobile {
+    display: block;
+    margin: auto;
+    width: 350px;
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
+
+.blogspottekstmobile1{
+    text-align: center;
+    padding-bottom: 40px;
+    }
+
+
+.blogspot2mobile {
+    display: block;
+    margin: auto;
+    width: 350px;
+    padding-top: 20px;
+    padding-bottom: 20px;`
+}
+
+.blogspottekstmobile2{
+    text-align: center;
+        padding-bottom: 40px;
+    
+    }
+
+.blogspot3mobile {
+    display: block;
+    margin: auto;
+    width: 350px;
+    padding: 20px;
+    padding-top: 20px;
+
+}
+    
+.blogspottekstmobile3{
+    text-align: center;
+    padding-bottom: 140px;
+    }
+
+.bundbannermobile {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 7;
+    grid-row-end: 8; 
+    object-position: center;
+}
+
+.bundbannerimgmobile {
+    width: 100vw;
+}
+    
+}
+
+
+/* ---- BLOG STYLING ---- */
+
+/*Styling for stor skærm*/
+@media screen and (min-width: 981px){
+
+  /*styling af velkommen til bloggen*/  
+.blogwelk{
+    padding-left: 22vw;
+    padding-top: 50px;
+    float:left;
+    font-size: 40px;
+    }
+    
+.blogtekst{
+    padding-left: 25vw;
+    padding-right: 20vw;
+    float:left;
+    
+    }
+
+.blogblomst{
+    width: 36px;
+    position: absolute;
+    padding-left: 9vw;
+    padding-top: 120px;     
+
+    }    
+/*Gridet har 3 kolonner på denne skærmstørrelse*/ 
+.grid-blog{
+    display: grid;
+    grid-template-columns: 26.5vw 26.5vw 26.5vw;
+    grid-gap: 5vw;
+    margin: 5vw;
+    margin-top: 320px;
+
+    }
+    
+    .blogpostimg{
+     width: 100%;
+         
+    }
+    
+    .blogimg1{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    
+   
+    }
+    
+    .blogposttekst1{
+    grid-column-start: 1;
+    grid-column-end: 2;    
+    grid-row-start: 2;
+    grid-row-end: 3;
+    padding-top: 30px;
+        
+    }
+
+    .blogimg2{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+
+        
+    }
+    .blogposttekst2{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    padding-top: 30px;
+    }
+
+    
+    .blogimg3{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;  
+
+    }
+        
+    .blogposttekst3{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    padding-top: 30px;
+    }
+    .instafeedShare{
+    width: 100vw;
+    }
+}
+
+
+/* ---- BLOG TABLET STYLING ---- */
+@media screen and (max-width: 980px){
+    
+.blogwelk{
+    padding-left: 12vw;
+    padding-top: 40px;
+    float:left;
+    font-size: 35px;
+        
+    }
+.blogtekst{
+    padding-left: 12vw;
+    padding-right: 20vw;
+    float:left;
+    
+    }
+
+.blogblomst{
+    width: 36px;
+    position: absolute;
+    padding-left: 12vw;
+    padding-top: 100px;     
+
+    }    
+
+/*Gridet har 2 kolonner på denne skærmstørrelse*/ 
+.grid-blog{
+    display: grid;
+    grid-template-columns: 41.5vw 41.5vw;
+    grid-gap: 5vw;
+    margin: 5vw;
+    margin-top: 270px;
+    }
+    
+    .blogpostimg{
+     width: 100%;
+         
+    }
+    
+    .blogimg1{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+   
+    }
+    
+    .blogposttekst1{
+    grid-column-start: 1;
+    grid-column-end: 2;    
+    grid-row-start: 2;
+    grid-row-end: 3;
+    padding-top: 30px;
+        
+    }
+
+    .blogimg2{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+
+        
+    }
+    .blogposttekst2{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    padding-top: 30px;
+    }
+
+    
+    .blogimg3{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;  
+    padding-top: 30px;
+
+    }
+        
+    .blogposttekst3{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    padding-top: 30px;
+    }
+}
+
+/* ---- BLOG MOBILE STYLING ---- */
+@media screen and (max-width: 550px){
+
+    
+.blogwelk{
+    padding-top: 40px;
+    font-size: 30px;
+    text-align: center;    
+    padding-bottom: 2px;
+    }
+    
+.blogtekst{
+    text-align: center;
+    padding-top: none;
+        padding-left: 35px;
+    padding-right: 35px;
+    
+    }
+
+.blogblomst{
+    width: 30px;
+    display: block;
+    text-align: center;
+    margin-left: 32vw;
+    padding-top: 320px;
+ 
+
+    }  
+
+/*Gridet har 1 kolonne på denne skærmstørrelse*/ 
+.grid-blog{
+    display: grid;
+    grid-template-columns: 82vw;
+    grid-gap: 5vw;
+    margin: 9vw;
+    margin-top: 450px
+    
+    }
+    
+    .blogpostimg{
+     width: 100%;
+         
+    }
+    
+    .blogimg1{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+   
+    }
+    
+    .blogposttekst1{
+    grid-column-start: 1;
+    grid-column-end: 2;    
+    grid-row-start: 2;
+    grid-row-end: 3;
+    padding-top: 30px;
+    text-align: center;
+        
+    }
+
+    .blogimg2{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+
+
+        
+    }
+    .blogposttekst2{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    text-align: center;
+    }
+
+    
+    .blogimg3{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 6;  
+    padding-top: 30px;
+
+    }
+        
+    .blogposttekst3{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    padding-top: 30px;
+    text-align: center;
+    }
+}
+
+
+
+
+    
