@@ -1,0 +1,352 @@
+/*GENERELLE REGLER*/
+
+/* sørger for at bagrunden og skrifttypen er den samme over alt på bodyen, samt at der ikke er uønsket margin */ 
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+        font-family: 'open sans', sans-serif;
+    background-color: #faf7ef;
+}
+
+/* sikre at alle overskrifter har samme skrifttype */ 
+
+h1{
+    font-family: 'Patua One', cursive;
+}
+
+/* Mobil Test side start */  
+
+.test-side p{
+    padding: 10%;
+    font-size: 26px;
+}
+
+/* Gør linket på "her" blåt så man kan se at det er et link */ 
+
+.test-side a{
+    color: royalblue;
+}
+
+/* menu start */
+
+/* gør skriften hvid og fjerner stregen under links som er default */ 
+a{
+    color: white;
+    text-decoration: none;
+}
+
+/* Ligger logoet i midten */ 
+
+.logo{
+    width: 350px;
+    display: block;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+
+
+
+/* online butik start */
+
+/* placere og styler teksten i toppen af siden 'online butik' */ 
+
+.online-butik-intro{
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: left;
+    font-size: 16px;
+    padding-bottom: 2%;
+}
+
+/* Gør linket på "her" blåt så man kan se at det er et link */
+#se-alt{
+    color: blue;
+}
+
+
+/* styler og placere teksten i centrum */ 
+.kategorier{
+    text-align: center;
+     font-size: 28px;
+}
+
+/* styre størelsen på knapperne og giver luft til footeren */
+.kategori-img{
+    width: 69%;
+    padding-bottom: 5%;
+}
+
+/* sørger for at knapperne ligger sig ved siden af hinanden */ 
+.kategori-knapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* start på Hobby side */
+
+/* gør sådan at der er lidt luft til både menuen og til teksten under */ 
+.smaa-knapper{
+    padding: 1%;
+    padding-top: 2%;
+}
+
+/* styre størrelsen på de små kanpper i toppen */ 
+.lille-knap{
+    width: 12%;
+}
+
+/* styre størelsen på kurven */ 
+.kurv{
+    width: 6%;
+}
+
+/* styler overskriften */ 
+.hobby-overskrift{
+    text-align: center;
+    font-size: 28px;
+}
+
+/* sørger for at alt inden for main ligger sig omkring hinanden og tilføjer luft mellem de forskellige divs med 'space-around */
+.hobby {
+justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* styre størelsen på billederne af garnet */ 
+.garn{
+    width: 50%;
+    padding: 2%;
+    padding-top: 7%;
+}
+
+/* styre skrift størrelsen på teksten ved garnet */
+.garn-box p{
+    font-size: 10px;
+}
+
+/* giver de divs med garn indeni en kant, og får divsne til at placere sig i søjler i centrum */ 
+.garn-box {
+    margin: 1%;
+width: 46%;
+    height: 210px;
+border: 2px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+/* eftersom at den første div har et link ville den ikke arbejde sammen med den samme komando som ovenover */ 
+.garn-box a{
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+/* hobby side slut */
+
+
+/* Start på produkt side */
+
+
+/* styler overskriften */ 
+.garn-overskrift{
+    text-align: center;
+    font-size: 28px;
+}
+
+
+/* placere elementerne i forhold til hinanden */ 
+.produkt-side{
+        display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* styre størrelsen på billedet */ 
+.sort-garn{
+    width: 32%;
+}
+
+/* placere teksten ved siden af billedet */ 
+.produkt-tekst{
+   padding: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* styler knappen så med størrelse og farve */ 
+.knap{
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    background-color: rosybrown;
+    border: 5px;
+    border-color: red;
+    margin-bottom: 2%;
+
+}
+
+/* gør at knapperne "skifter farve" når man hover over dem*/
+
+.knap:hover {
+    opacity: 80%;
+}
+
+/* styler pris tallene */
+.pris{
+    font-size: 30px;
+    text-align: center;
+}
+
+
+/* Start på Mobil footer */
+
+/* styler bagrunds farven og placere elementerne i centrum med plas imellem */
+footer{
+    background-color: #62676a;
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2%;
+
+}
+
+/* styler footer overskriften */ 
+footer h4{
+    font-size: 11px;
+}
+
+/* styler tkesten i footeren */ 
+footer p{
+    color: black;
+    font-size: 9px;
+}
+
+/* giver billedet en fleksibel størelse, da det er i % vil billedet vokse og skrumpe efter hvilken skærm man ser på */
+footer img{
+    width: 27%;
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+
+
+/* online butik start */
+    
+/* placere knapperne og giver dem en størrelse */ 
+.kategori-knapper a{
+    width: 33%;
+    flex-direction: row;
+}
+    
+/* gør at knapperne "skifter farve" når man hover over dem, det hjælper med at se hvilken en man trykker på */ 
+    
+    .kategori-knapper a:hover {
+    opacity: 80%;
+}
+
+/* slut på online butik */
+
+
+/* start på hobby */
+
+    /* giver kanpperne en lille smule luft */ 
+    .lille-knap{
+        padding: 0.4%;
+    }
+ 
+/* gør at knapperne "skifter farve" når man hover over dem, det hjælper med at se hvilken en man trykker på */     
+    
+    .smaa-knapper a:hover {
+    opacity: 80%;
+}
+
+    /* giver billederne af garn en størrelse */
+    .garn{
+        width: 60%;
+    }
+
+    /* giver diven en fast størrelse */ 
+    .garn-box {
+width: 22%;
+    height: 400px;
+}
+    
+/* styler teksten i diven med garn */
+    .garn-box p{
+        font-size: 16px;
+    }
+
+
+/* eksempel på en produkt side */
+
+    /* styler overskriften */
+.garn-overskrift{
+   padding-top: 3%;
+    font-size: 48px;
+}
+
+    /* placere elementerne på siden */ 
+.produkt-side{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+    /* styre billedet på siden */
+.sort-garn{
+    width: 20%;
+    padding-bottom: 5%;
+}
+
+    /* giver tekst boksen en vide og placere denne i centrum */
+.produkt-tekst{
+    width: 50%;
+    align-self: center;
+    }
+    
+    /* styler prisens størelse */
+    .pris{
+        font-size: 40px;
+    }
+
+    /* start på footer */
+
+/* giver footeren en højde og sørge for at den fylder hele skærmen */ 
+    footer{
+        height: 180px;
+        width: 100%;
+    }
+
+    /* sørger for størrelsen af billedet */ 
+    footer img{
+        width: 13%;
+        margin-right: 2%;
+    }
+
+    /* styre de to divs som teksten står i */ 
+    footer div{
+        width: 20%;
+         margin-left: 2%;
+    }
+
+/* styler footer overskrifterne */     
+    footer h4{
+        font-size: 17px;
+        font-family: 'Patua One', cursive;
+    }
+
+    /* styler teksten i footeren */
+    footer p{
+        font-size: 13px;
+    }
+
+}
