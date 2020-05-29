@@ -46,9 +46,6 @@ a{
     padding-bottom: 10px;
 }
 
-
-
-
 /* online butik start */
 
 /* placere og styler teksten i toppen af siden 'online butik' */ 
@@ -220,11 +217,12 @@ footer{
 /* styler footer overskriften */ 
 footer h4{
     font-size: 11px;
+    color: white;
 }
 
 /* styler tkesten i footeren */ 
 footer p{
-    color: black;
+    color: white;
     font-size: 9px;
 }
 

@@ -21,14 +21,11 @@ body {
 
 /* bagrundsfarven på navigationen */ 
 nav{
-    background-color:darkslategray;
+    background-color:#426f61;
 
 }
 
-/*Da vi bruger flexbox er det en god idé altid at sætte billeder til 100% width og så tilpasse den container rundt om billedet efterfølgende*/
-img {
 
-}
 
 /* farven og størrelsen på headeren */
 header {
