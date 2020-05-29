@@ -2,72 +2,11 @@
 
 /* Menu med inspiration fra https://github.com/itaddiction/flexnavdropdown, og med egne ændringer */
 
-
-/*Dette fjerner browsernes padding og margin fra selve body og ikke fra f.eks. lister og overskrifter, hvor vi ofte gerne vil beholde det*/
-body {
-    padding: 0;
-    margin: 0;
-    font-family: sans-serif;
-    background-color: #faf7ef;
-    font-family: 'open sans', sans-serif;
-
-}
-
-/*Box-sizing skal gælde for alle elementer, hvorfor den sættes på * og ikke bare body */
-* {
-    box-sizing: border-box;
-
-}
-
-/* bagrundsfarven på navigationen */ 
-nav{
-    background-color:#426f61;
-
-}
-
-
-
-/* farven og størrelsen på headeren */
-header {
-    background-color: #faf7ef;
-    width: 100%;
-}
-
-/*NAVIGATION - responsiv med flexbox*/
-
-
-#logo-burger {
-    display: flex;
-    align-items: center;
-    margin: 0 .5em;
-}
-
 #logo-burger a {
     margin-right: auto;
     width: 100px;
 }
 
-#main-nav {
-    display: flex;
-    margin-right: .5em;
-}
-
-#main-nav a {
-    color: white;
-    text-decoration: none;
-    display: block;
-    font-size: 18px;;
-    line-height: 1.5em;
-}
-
-#main-nav a:hover {
-    background-color: lightskyblue;
-}
-
-/*active class sættes på det link i menuen man befinder sig på, så farven ændres på menuen på den aktuelle side - den er ikke sat på noget endnu*/
-.active {
-    color: lightgrey;
-}
 
 /*Denne skjuler burgermenuens checkbox som aktiverer toggle funktionen*/
 .hidden {
@@ -83,9 +22,19 @@ header {
         display: block;
         padding: 1.2%;
     }
+    label{
+margin-left: 90%;
+    }
+
+#topnav a {
+
+    display: block;
+    font-size: 18px;;
+    line-height: 1.5em;
+}
 
     .logo{
-        width: 200%;
+        width: 80%;
     }
 
     /*label er selve burgerikonet*/
@@ -97,19 +46,13 @@ header {
     }
 
     /*Dette gør at burgermenuen folder sig ud, når man klikker på den - eller rettere sagt den checkboks som er skjult bag den*/
-    #toggle:checked + #main-nav {
+    #toggle:checked + #topnav {
         display: block;
     }
 
     /*Den primære navigation skjules på den lille skærm*/
-    #main-nav {
+    #topnav {
         display: none;
-    }
-
-    /* sørger for at linkene ligger i midten på mobilen */
-    #main-nav a {
-        text-align: center;
-        border-top: 1px solid rgba(0, 0, 0, 0.1);
     }
 
 
@@ -124,67 +67,11 @@ header {
 
 @media all and (min-width: 600px) {
 
-    /*HEADER NAV*/
 
-    nav{
-        height: 55px;
-        padding-left: 5%;
-        padding-right: 5%;
-        padding-top: 0.2%;
-    }
-
-    #logo-burger{
-  margin-left: 35%;;
-  margin-right: auto;
-    }
-
-    /*styre logoets størrelse */
-    .logo{
-        width: 280%;
-        padding: 14%;
-    }
-
-    
-    /* styre hvordan teksten ser ud */ 
-#main-nav a {
-    color: white;
-    text-decoration: none;
-    display: block;
-    font-size: 18px;
-    width: 20%;
-    text-align: center;
-    margin: 0 .5em;
-    padding-top: 0.5%;
-}
-
-    /* styre logoet */ 
-    #main-nav img{
-       width: 20%;
-        padding-top: 1%;
-    }
-
-    .hidden {
-        display: none;
-    }
 
     /*Dette fjerner burgermenu ikonet*/
     label {
         display: none;
     }
-
-}
-
-/*MEDIA QUERY LAPTOP AND ABOVE*/
-
-@media all and (min-width: 1024px) {
-
-    /*NAVIGATION*/
-    
-    /* ligger linkene i en række */ 
-    nav {
-        flex-direction: row;
-        font-size: 28px;
-    }
-
 
 }

@@ -11,8 +11,13 @@ body {
 
 /* sikre at alle overskrifter har samme skrifttype */ 
 
-h1{
+.hobby-overskrift{
     font-family: 'Patua One', cursive;
+    font-size: 40px;
+}
+
+.online-overskrift{
+    text-align: center;
 }
 
 /* Mobil Test side start */  
@@ -207,7 +212,6 @@ border: 2px solid lightgray;
 footer{
     background-color: #62676a;
     display: flex;
-    height: 100px;
     align-items: center;
     justify-content: space-between;
     padding: 2%;
@@ -320,8 +324,7 @@ width: 22%;
 
 /* giver footeren en højde og sørge for at den fylder hele skærmen */ 
     footer{
-        height: 180px;
-        width: 100%;
+
     }
 
     /* sørger for størrelsen af billedet */ 
@@ -332,7 +335,7 @@ width: 22%;
 
     /* styre de to divs som teksten står i */ 
     footer div{
-        width: 20%;
+        width: 15%;
          margin-left: 2%;
     }
 

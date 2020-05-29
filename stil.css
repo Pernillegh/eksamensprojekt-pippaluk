@@ -1,4 +1,3 @@
-
     /*Styling der gælder hele siden*/
 body {
     margin: 0;
@@ -70,12 +69,7 @@ a{
     padding-left: 10px;
 }
 /*Sticky topbar  fra w3schools - https://www.w3schools.com/howto/howto_js_navbar_sticky.asp*/
-.sticky {
-  position: fixed;
-  top: 0px;
-  width: 100%;
-  z-index: 4;
-}
+
 
 /* Hide the link that should open and close the topnav on small screens */
 #topnav .icon{
@@ -248,57 +242,6 @@ h3{
 
 .bundbannerimg{
     width: 100vw;
-}
-
-/*FOOTER*/
-.footer{
-    background-color:#62676a;
-    grid-column-start: 1;
-    grid-column-end: 7;
-    grid-row-start: 8;
-    grid-row-end: 9;
-    column-count: 3;
-    text-align: center;
-    padding-top: 20px; 
-    padding-bottom 100px;
-    color: #fff;
-    width: 100%;
-}
-
-.footer-text{
-
-    padding-top: 30px;
-    font-size: 20px
-}
-
-.footer-overskrift{
-    padding-bottom: 10px;
-}
-
-.kontakt1 {
-    background-color: aqua;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 8;
-    grid-row-end: 9;
-    margin-bottom: 30px;
-}
-
-.kontakt2 {
-    background-color: darkslategray;
-    grid-column-start: 3;
-    grid-column-end: 5;
-    grid-row-start: 8;
-    grid-row-end: 9;
-}
-
-.kort {
-    grid-column-start: 5;
-    grid-column-end: 7;
-    grid-row-start: 8;
-    grid-row-end: 9;
-    width: 20vw;
-    margin-bottom: 80px;
 }
 
 
@@ -564,7 +507,6 @@ h1{
     .bundbannerimgmobile{display: none;}  
 }
 
-
 /*Styling når skærmen er max 600 Pixels bred*/
 
 @media screen and (max-width: 600px){
@@ -671,7 +613,7 @@ h1{
     grid-template-columns: 26.5vw 26.5vw 26.5vw;
     grid-gap: 5vw;
     margin: 5vw;
-    margin-top: 320px;
+    margin-top: 100px;
 
     }
     
@@ -863,7 +805,7 @@ h1{
     grid-template-columns: 82vw;
     grid-gap: 5vw;
     margin: 9vw;
-    margin-top: 450px
+    margin-top: 120px
     
     }
     

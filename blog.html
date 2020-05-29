@@ -16,30 +16,38 @@
 
 <!--LINK STYLESHEETS-->
     <link href="stil.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/menu-style.css">
+    <link rel="stylesheet" href="css/style.css">
 
     
 </head>
     
     <body>
 <!-- header-taget indeholder logoet og hele top-navigationen -->
-        <header> 
-          <a href="index.html"><img class="logo" src="Images/PippalukLogo.png" alt="Pippaluk Logo"></a>
-<!--NAVIGATION OG MARKERING AF AKTIV SIDE-->
-          <nav id="topnav">
-              <a class="navtekst " href="index.html">FORSIDE</a>
-              <a class="navtekst" href="#">ONLINE BUTIK</a>
-              <a class="navtekst navtekstmarkeret" href="blog.html">INSPIRATION</a>
-              <a class="navtekst" href="omos.html">OM PIPPALUK</a>
+            <header >
+       <div id="logo-burger">
+        <a href="index.html"><img class="logo" src="Images/PippalukLogo.png" alt="Pippaluk Logo"></a>
 
-              <a class="navtekst" href="https://www.facebook.com/Butik-Pippaluk-602284440182753/"><img class="someicons" src="Images/fbiconhvid.png"></a>
-              <a class="navtekst" href="https://www.instagram.com/butik_pippaluk/?hl=da"><img class="someicons" src="Images/igiconhvid.png"></a>
-          </nav>
-    <!--Velkommen til bloggen-->  
-            <h1 class="blogwelk">Velkommen til min lille blog</h1>
-            <p class="blogtekst">Her finder du både nemme sy-selv-projekter,<br> såvel som korte artikler om bæredygtighed og udvalgte produkter <br>og en gang imellem en lille strikkeopskrift</p>
-            <img class="blogblomst" src="Images/blomstBlog.png">
-            
-          </header>
+         <label for="toggle">&#9776;</label>
+           </div>
+            <!--dette er en checkbox som gør det muligt at folde burgermenuen ud, og den skal ligge udenfor div'en-->
+            <nav>
+            <input type="checkbox" id="toggle" class="hidden">
+        <div id="topnav">
+<!--NAVIGATION OG MARKERING AF AKTIV SIDE-->
+            <a class="navtekst navtekstmarkeret" href="index.html">FORSIDE</a>
+            <a class="navtekst" href="online-butik.html">ONLINE BUTIK</a>
+            <a class="navtekst" href="blog.html">INSPIRATION</a>
+            <a class="navtekst" href="omos.html">OM PIPPALUK</a>
+<!--LINK TIL SOME-->
+            <a class="navtekst" href="https://www.facebook.com/Butik-Pippaluk-602284440182753/"><img class="someicons" src="Images/fbiconhvid.png"></a>
+            <a class="navtekst navfb" href="https://www.instagram.com/butik_pippaluk/?hl=da"><img class="someicons" src="Images/igiconhvid.png"></a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i></a>
+
+    </div>
+    </nav>
+    </header>
 <!-- Gridholder til bloggen  -->
         <main class="grid-blog">
       
@@ -130,7 +138,25 @@
 <!-- MOBIL Fake Instagram-feed -->   
     <picture class="bundbannermobile"><img class="bundbannerimgmobile" src="Images/igfeedShareMobile.png"></picture>
         
-            
+     <footer>
+
+       <div class="adresse">
+        <h4 class="footer-text footer-overskrift">Pippaluk</h4>
+        <p class="footer-text">Mellemgade 5</p>
+        <p class="footer-text">5600 Fåborg</p>
+        <p class="footer-text">Aarhus </p>
+</div>
+
+       <div class="kontakt">
+        <h4 class="footer-text footer-overskrift">Kontakt</h4>
+        <p class="footer-text">Johanna Solfred Marieke Bonde</p>
+        <p class="footer-text">Tlf.: +45 23 80 18 93</p>
+        <p class="footer-text">E-mail: johanna@pippaluk.dk</p>
+</div>
+        <img class="kort" src="Images/kort.png" alt="kort">
+
+
+    </footer>
             
 <!-- Javascript -->     
     <script src="navstick.js"></script>
